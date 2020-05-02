@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="root" minHeight="300.0" minWidth="200.0" prefHeight="800.0" prefWidth="600.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SettingsPageController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e8e8e8" height="30.0" layoutX="30.0" layoutY="20.0" stroke="TRANSPARENT" strokeType="INSIDE" width="207.0" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="20.0" />
+      <Text layoutX="28.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Browser Settings" wrappingWidth="207.13671875" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Search Engine" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="95.0">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Text>
+      <ChoiceBox fx:id="searchEngines" layoutX="30.0" layoutY="72.0" prefWidth="150.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="120.0" />
+      <TextField fx:id="homePage" layoutX="30.0" layoutY="259.0" onAction="#setHome" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="259.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </TextField>
+      <Text layoutX="30.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Home Page" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="234.2919921875">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Text>
+      <CheckBox fx:id="maxBox" layoutX="30.0" layoutY="314.0" mnemonicParsing="false" onAction="#setMax" text="Start Maximized" AnchorPane.topAnchor="314.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </CheckBox>
+      <Button layoutX="30.0" layoutY="201.0" mnemonicParsing="false" text="Add new Search Engine" />
+   </children>
+   <padding>
+      <Insets top="35.0" />
+   </padding>
+</AnchorPane>

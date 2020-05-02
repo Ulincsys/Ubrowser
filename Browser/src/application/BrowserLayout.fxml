@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="root" maxHeight="823.0" maxWidth="600.0" minHeight="800.0" minWidth="600.0" prefHeight="823.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BrowserController">
+   <children>
+      <TabPane fx:id="mainTabs" prefHeight="800.0" prefWidth="600.0" tabClosingPolicy="ALL_TABS" tabMaxHeight="35.0" tabMaxWidth="150.0" tabMinHeight="25.0" tabMinWidth="150.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <ProgressBar fx:id="progressBar" layoutX="14.0" layoutY="800.0" prefWidth="200.0" progress="0.0" visible="false" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="10.0" />
+      <Label fx:id="loadLabel" layoutX="217.0" layoutY="804.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="217.0" />
+      <MenuBar layoutX="476.0" layoutY="800.0" maxHeight="20.0" minWidth="20.0" prefHeight="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Close" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleUndoClose" text="Re-Open Tab" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleNewTab" text="New Tab" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleRefresh" text="Refresh" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleBack" text="Back" />
+                  <MenuItem mnemonicParsing="false" onAction="#loadHistory" text="History" />
+                  <MenuItem mnemonicParsing="false" onAction="#loadSettings" text="Settings" />
+                  <MenuItem mnemonicParsing="false" onAction="#loadAbout" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane layoutX="10.0" layoutY="1.0" prefHeight="40.0" prefWidth="600.0" styleClass="topBar" stylesheets="@application.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="32.0">
+         <children>
+            <TextField fx:id="addressBar" layoutX="14.0" layoutY="8.0" maxHeight="20.0" onAction="#handleSearch" prefHeight="20.0" prefWidth="445.0" text="Address bar" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="8.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font></TextField>
+            <Button fx:id="newTabButton" maxHeight="27.0" mnemonicParsing="false" onAction="#handleNewTab" prefHeight="20.0" prefWidth="20.0" styleClass="topBar" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="7.0">
+               <font>
+                  <Font name="Bell MT Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="20.0" fitWidth="20.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+               <image>
+                  <Image url="@newTab.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ImageView>
+            <Button fx:id="refreshButton" mnemonicParsing="false" onAction="#handleRefresh" prefHeight="20.0" prefWidth="30.0" styleClass="topBar" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+               <font>
+                  <Font name="Bell MT Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="20.0" fitWidth="21.25" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+               <image>
+                  <Image url="@refresh.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ImageView>
+            <Button fx:id="backButton" layoutX="41.0" layoutY="11.0" maxWidth="36.0" minWidth="20.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="27.0" prefWidth="30.0" styleClass="topBar" AnchorPane.leftAnchor="41.0" AnchorPane.topAnchor="10.0">
+               <font>
+                  <Font name="Bell MT Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="20.0" fitWidth="21.25" layoutX="20.0" layoutY="20.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="10.0">
+               <image>
+                  <Image url="@back.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
